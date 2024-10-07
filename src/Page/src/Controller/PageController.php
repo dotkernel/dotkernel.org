@@ -47,4 +47,25 @@ class PageController extends AbstractActionController
             $this->template->render('page::who-we-are')
         );
     }
+
+    public function flowMiddlewaresAction(): ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->template->render('page::flow-middlewares')
+        );
+    }
+
+    public function flowLibrariesAction(): ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->template->render('page::flow-libraries')
+        );
+    }
+
+    public function flowLibrariesEmailAction(): ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->template->render('page::flow-libraries-email')
+        );
+    }
 }

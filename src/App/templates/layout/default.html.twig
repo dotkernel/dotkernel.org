@@ -17,9 +17,30 @@
         <meta name="msapplication-TileColor" content="#2d89ef">
         <meta name="theme-color" content="#ffffff">
 
-        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@dotkernel">
+        <meta name="twitter:title" content="PHP REST API application | Dotkernel Application">
+        <meta name="twitter:description"
+              content="An opinionated framework-less tool aimed at intermediate-to-advanced level programmers to start
+           implementing REST APIs swiftly and efficiently.">
+        <meta name="twitter:image" content="{{ url('home') }}images/app/PHP-REST-API.png">
+        <meta name="twitter:image:alt" content="PHP REST API application | Dotkernel Application">
+
+        <!-- OpenGraph card -->
+        <meta property="og:title" content="PHP REST API application | Dotkernel Application"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{ url('home') }}"/>
+        <meta property="og:image" content="{{ url('home') }}images/app/PHP-REST-API.png"/>
+        <meta property="og:description"
+              content="An opinionated framework-less tool aimed at intermediate-to-advanced level programmers to start
+          implementing REST APIs swiftly and efficiently."/>
+
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:200,300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600" rel="stylesheet">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
@@ -32,30 +53,27 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container">
                         <a href="/" class="navbar-brand">
-                            <img src="{{ asset('images/app/logo.svg') }}"
-                                 onerror="this.onerror=null; this.src='{{ asset('images/app/logo.png') }}';"
-                                 alt="Dotkernel" />
+                            <img src="{{ asset('images/app/logo-red-full.svg') }}" alt="Dotkernel API"/>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarHeader">
+                        <div class="menu" id="navbarHeader">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                    <div class="dropdown-menu" aria-labelledby="pageDropdown">
-                                        <a class="dropdown-item" href="{{ url('page', {action: 'home'}) }}">Home</a>
-                                        <a class="dropdown-item" href="{{ url('page', {action: 'about-us'}) }}">About Us</a>
-                                        <a class="dropdown-item" href="{{ url('page', {action: 'who-we-are'}) }}">Who We Are</a>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_blank" href="https://docs.dotkernel.org/api-documentation/">Documentation</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://github.com/dotkernel/light/" target="_blank">GitHub</a>
+                                    <a class="nav-link" target="_blank" href="https://www.dotkernel.com/">Dotkernel
+                                        Applications</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="{{ url('page', {action: 'index'}) }}">Disabled</a>
+                                    <a class="nav-link" target="_blank" href="https://www.dotkernel.com/blog/">Blog</a>
+                                </li>
+                                <li class="button-border">
+                                    <a class="nav-link" target="_blank" href="https://github.com/dotkernel/api">GitHub</a>
                                 </li>
                             </ul>
                         </div>
@@ -80,13 +98,98 @@
         </div>
 
         <footer class="app-footer">
-            <div class="container">
-                <p class="enjoy">
-                    enjoy dotkernel
-                </p>
-                <p>
-                    © {{ 'now'|date('Y') }} Dotkernel by Apidemia
-                </p>
+            <div class="container container-border">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="footer_head">
+                            <h2>Dotkernel</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 dk_widget">
+                                <p class="footer-item-title">
+                                    Dotkernel API
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="https://github.com/dotkernel" target="_blank">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Go to Git
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="/page/flowMiddlewares">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Middleware Flow
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="/page/flowLibraries">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Default Library Flow
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-large">
+                                    <a href="/page/flowLibrariesEmail">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Library Flow for Email
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-6 dk_widget">
+                                <p class="footer-item-title">
+                                    Dotkernel All Repositories
+                                </p>
+                                <p class="footer-item-link margin-large">
+                                    <a href="https://github.com/dotkernel" target="_blank">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Go to Git
+                                    </a>
+                                </p>
+                                <p class="footer-item-title">
+                                    Dotkernel Admin
+                                </p>
+                                <p class="footer-item-link margin-large">
+                                    <a href="https://github.com/dotkernel/admin" target="_blank">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Go to Git
+                                    </a>
+                                </p>
+                                <p class="footer-item-title">
+                                    Dotkernel Frontend
+                                </p>
+                                <p class="footer-item-link margin-large">
+                                    <a href="https://github.com/dotkernel/frontend" target="_blank">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Go to Git
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer_head">
+                            <h2>Support</h2>
+                        </div>
+                        <p class="footer-item-support margin-small">
+                            <a href="https://github.com/dotkernel" target="_blank">
+                                <img src="{{ asset('images/app/icon/vector.svg') }}">
+                                Git
+                            </a>
+                        </p>
+                        <p class="footer-item-support margin-small">
+                            <a href="https://x.com/dotkernel" target="_blank">
+                                <img src="{{ asset('images/app/icon/twitter.png') }}">
+                                Find Us on X
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p class="footer-headline">
+                        © {{ 'now' | date('Y') }} by <a href="https://www.dotkernel.com" target="_blank">
+                         Dotkernel</a> a collection of PSR-7 Middleware applications and libraries
+                    </p>
+                </div>
             </div>
         </footer>
 

@@ -1,0 +1,181 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Middleware Flow{% endblock %}
+
+{% block page_title %}{% endblock %}
+
+{% block content %}
+    <div class="page-intro">
+        <div class="container">
+            <h2>Middleware Flow</h2>
+            <p>The graph below demonstrates a default flow between DotKernel's middlewares.</p>
+        </div>
+    </div>
+
+    <div class="flow-graphs middlewares">
+        <div class="flow-container">
+            <div class="box-big gray-gradient">
+                <div class="title">ErrorHandlerInterface</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">Other Middlewares (Optional)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">CorsMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">RouteMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">AuthenticationMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">AutorizationMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">Other Middlewares (Optional)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">UrlHelperMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">DispatchMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big gray-gradient">
+                <div class="title">NotFoundHandler (Fallback)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
