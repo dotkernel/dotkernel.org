@@ -1,0 +1,80 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Default Library Flow{% endblock %}
+
+{% block page_title %}{% endblock %}
+
+{% block content %}
+    <div class="page-intro">
+        <div class="container">
+            <h2>Default Library Flow</h2>
+            <p>The graph below demonstrates a default flow between DotKernel's libraries.</p>
+        </div>
+    </div>
+
+    <div class="flow-graphs libraries">
+        <div class="flow-container">
+            <div class="row">
+                <div class="box black">Request</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-errorhandler</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-cors</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-router</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-response-header</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authentication</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authorization</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-helpers</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row" style="display: flex">
+                <div class="box blue">mezzio/mezzio-router</div>
+                <div class="arrow-right" style="background: url('/images/app/icon/arrow-right.svg') no-repeat center;"></div>
+                <div class="box blue">laminas/laminas-diactoros - (NotFound)</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-dependency-injection</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">doctrine/orm</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-hal</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box purple">laminas/laminas-diactoros</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">psr/http-message</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box black">Response</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

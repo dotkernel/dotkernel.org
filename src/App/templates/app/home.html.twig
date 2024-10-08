@@ -1,138 +1,666 @@
 {% extends '@layout/default.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}REST API{% endblock %}
+
+{% block page_title %}{% endblock %}
 
 {% block content %}
-    {{ messagesPartial('partial::alerts', {}, null, 'page-home') }}
-    <div class="page-intro home-intro">
+    <div class="home-intro">
         <div class="container">
-            <p class="welcome">Dotkernel is a collection of</p>
-            <h1>PSR-7 Middleware applications</h1>
-            <p>Built on top of the Mezzio microframework. <br/>Composed of a set of custom and extended Laminas components.</p>
-        </div>
-        <div class="arrow_down">
-            <div class="arrow_down_content">&nbsp;</div>
-        </div>
-    </div>
-
-    <div class="home-list">
-        <div class="container">
-            <h2><a href="https://docs.mezzio.dev/mezzio/" target="_blank" class="text-decoration-none">Mezzio</a></h2>
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <h3>
-                        <a href="https://github.com/php-fig/container" target="_blank" class="text-decoration-none">containers</a>
-                    </h3>
-                    <p>
-                        Dotkernel is built around the PSR-11 dependency container.
-                        We have chosen <b>Laminas Service Manager</b> as our default implementation.
-                    </p>
-                    <p>
-                        Get Started with <a href="https://github.com/laminas/laminas-servicemanager" target="_blank" class="text-decoration-none">Laminas Service Manager</a>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3>
-                        <a href="https://github.com/twigphp/Twig" target="_blank" class="text-decoration-none">templating</a>
-                    </h3>
-                    <p>
-                        By default, no middleware in Laminas is templated.
-                        For Dotkernel's Light application, we have chosen <b>Twig</b> as the default templating engine.
-                    </p>
-                    <p>
-                        Get started with <a href="https://twig.symfony.com/" target="_blank" class="text-decoration-none">Twig</a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h3>
-                        <a href="https://github.com/nikic/FastRoute" target="_blank" class="text-decoration-none">routers</a>
-                    </h3>
-                    <p>
-                        Among the various routing implementations compatible with Expressive, we have chosen <b>FastRoute</b> as Dotkernel's default routing library.
-                    </p>
-                    <p>
-                        Get started with <a href="https://github.com/nikic/FastRoute" target="_blank" class="text-decoration-none">FastRoute</a>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3>
-                        <a href="https://github.com/laminas/laminas-diactoros" target="_blank" class="text-decoration-none">http messages</a>
-                    </h3>
-                    <p>
-                        Laminas, and consequently Dotkernel, is built around the PSR-7 standard.<br />It uses <b>Laminas Diactoros</b> as the PSR-7 implementation.
-                    </p>
-                    <p>
-                        Get started with <a href="https://github.com/php-fig/http-message" target="_blank" class="text-decoration-none">PSR-7</a> and <a href="https://github.com/laminas/laminas-diactoros" target="_blank" class="text-decoration-none">Diactoros</a>
-                    </p>
-                </div>
-            </div>
-
-            <h2>Dotkernel Light components</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="accordion" id="dotkernelComponents">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h4 class="">
-                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Controllers
-                                    </button>
-                                </h4>
+                <div class="col-lg-6 title">
+                    <p class="welcome">Dotkernel API</p>
+                    <h1>PHP REST API application built on top of </h1>
+                    <div class="logo-third-party">
+                        <img class="laminas" src="{{ asset('images/app/laminas-foundation-rgb.svg') }}"
+                             alt="Laminas Foundation">
+                        <img class="mezzio" src="{{ asset('images/app/trademark-laminas-mezzio.svg') }}" alt="Mezzio">
+                        <p class="mezzio-title">Mezzio</p>
+                    </div>
+                    <div class="row boxes">
+                        <div class="box-small box-left">
+                            <p class="subtext"><b>Dotkernel API</b> is an alternative for legacy <b>Laminas API
+                                    Tools</b> (formerly Apigility) applications</p>
+                            <div class="button-border">
+                                <a target="_blank"
+                                   href="https://www.dotkernel.com/dotkernel-api/dotkernel-api-versus-laminas-api-tools/">
+                                    Comparison table</a>
                             </div>
-                            <div id="collapseOne" class="collapse" data-parent="#dotkernelComponents" aria-labelledby="headingOne">
-                                <div class="card-body">
-                                    <ul class="list-unstyled list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a href="https://github.com/dotkernel/dot-controller" target="_blank" class="text-decoration-none">dot-controller</a>: controller-like middleware for laminas
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h4 class="">
-                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Logging & Error Handling
-                                    </button>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="collapse" data-parent="#dotkernelComponents" aria-labelledby="headingTwo">
-                                <div class="card-body">
-                                    <ul class="list-unstyled list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a href="https://github.com/dotkernel/dot-log" target="_blank" class="text-decoration-none">dot-log</a>: generic logging component
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="https://github.com/dotkernel/dot-errorhandler" target="_blank" class="text-decoration-none">dot-errorhandler</a>: automatically logs errors
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h4 class="">
-                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Rendering
-                                    </button>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="collapse" data-parent="#dotkernelComponents" aria-labelledby="headingThree">
-                                <div class="card-body">
-                                    <ul class="list-unstyled list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a href="https://github.com/dotkernel/dot-twigrenderer" target="_blank" class="text-decoration-none">dot-twigrenderer</a> extends the twig renderer with useful extensions and customizations
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="button-border">
+                                <a target="_blank"
+                                   href="https://getlaminas.org/blog/2024-07-02-dotkernel-a-replacement-for-laminas-api-tools.html">
+                                    Official Announcement</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 banner">
+                    <img src="{{ asset('images/app/banner.svg') }}" alt="Dotkernel API">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list" style="background-color: #fff">
+        <div class="container">
+            <div class="row boxes">
+                <div class="col-lg-6 col-sm-12 main-text">
+                    An opinionated framework-less tool aimed at intermediate-to-advanced level programmers <span>to
+                        start implementing REST APIs swiftly and efficiently.</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="icon">
+                        <img src="{{ asset('images/app/icon/arming_countdown.svg') }}" alt="Fine-tuned security">
+                    </div>
+                    <h4>
+                        Fine-tuned security
+                    </h4>
+                    <p>
+                        Create users with varying levels of access to control what each user type can do with your REST
+                        API.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="icon">
+                        <img src="{{ asset('images/app/icon/live_help.svg') }}" alt="Long-term support">
+                    </div>
+                    <h4>
+                        Long-term support
+                    </h4>
+                    <p>
+                        The REST API is backed by the Dotkernel team to stay on top of the latest coding trends.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-12" style="height: 0">&nbsp;</div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="icon">
+                        <img src="{{ asset('images/app/icon/cycle.svg') }}" alt="Reusability">
+                    </div>
+                    <h4>
+                        Reusability
+                    </h4>
+                    <p>
+                        We follow the coding principles of KISS, YAGNI, DRY for clean, concise and repetition-free code.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="icon">
+                        <img src="{{ asset('images/app/icon/cadence.svg') }}" alt="Gradual learning curve">
+                    </div>
+                    <h4>
+                        Gradual learning curve
+                    </h4>
+                    <p>
+                        We have an ever-expanding documentation to help you with installation and usage. If you can't
+                        find a solution for your particular problem, feel free to drop us a line.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list"
+         style="background: url('images/app/asterisk-green.svg') no-repeat right center;background-color: #fff">
+        <div class="container">
+            <div class="row boxes">
+                <div class="col-lg-6 col-md-6">
+                    <h2 class="text-decoration-none">Packed with everything you need</h2>
+                    <div class="box box-left">
+                        <p class="top-text">
+                            Modern Technologies
+                        </p>
+                        <h4>
+                            Supports a Core submodule that can be used in multiple codebases for the same project
+                        </h4>
+                        <p>
+                            Do you need multiple codebases for the same project? You can expand the REST API to use a
+                            Core submodule that is also used by your frontend and admin platforms (also available from
+                            Dotkernel). This way you ensure there are no incompatibilities between your platforms. Any
+                            change is easily pushed to all of them to sync the latest updates.
+                        </p>
+                    </div>
+                    <div class="box box-left">
+                        <p class="top-text">
+                            Modern Technologies
+                        </p>
+                        <h4>
+                            Has an active team of experienced developers working on keeping the codebase up-to-date
+                        </h4>
+                        <p>
+                            We at Dotkernel have been working on our REST API for the past decade to bring you a stable,
+                            fast, reliable solution for your needs. We have been using this REST API for our own
+                            projects and have ironed out all the kinks for you. Follow our quick tutorial and you are
+                            set. Visit our documentation pages for more details.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="box box-right">
+                        <p class="top-text">
+                            Modern Technologies
+                        </p>
+                        <h4>
+                            Has support for the latest PHP version 8.3
+                        </h4>
+                        <p>
+                            PHP is a popular programming language with a dedicated community that regularly delivers
+                            enhancements and refinements. PHP 8.3 puts emphasis on better performance, clean code and
+                            contains bug fixes as well as new features. Dotkernel subscribes to all standards
+                            recommendations (PSR) and keeps the REST API up-to-date with the latest version in all
+                            included 3rd party libraries.
+                        </p>
+                    </div>
+                    <div class="box box-right">
+                        <p class="top-text">
+                            Modern Technologies
+                        </p>
+                        <h4>
+                            Has been and always will be open source
+                        </h4>
+                        <p>
+                            The Dotkernel team monitors the code regularly to check for bugs and apply improvements. We
+                            welcome all feedback regarding our REST API from developers in the global PHP community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list"
+         style="background: url('images/app/comparison-green.svg') no-repeat left center;background-color: #fff">
+        <div class="container">
+            <div class="row boxes">
+                <h2 class="col-lg-6 col-sm-12">
+                    Key Features
+                </h2>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="description">
+                        <div class="icon"><img src="{{ asset('images/app/icon/notepad.svg') }}" alt="RESTful API"></div>
+                        <p>It’s a RESTful API, meaning it conforms to the constraints of representational state transfer
+                            (REST) architectural style.</p>
+                    </div>
+                    <div class="description">
+                        <div class="icon"><img src="{{ asset('images/app/icon/user1.svg') }}" alt="OAuth2 Secured">
+                        </div>
+                        <p>It’s secured with OAuth2, a standard designed to allow the REST API to access resources on
+                            behalf of a user.</p>
+                    </div>
+                    <div class="description">
+                        <div class="icon"><img src="{{ asset('images/app/icon/jump.svg') }}" alt="Postman Integration">
+                        </div>
+                        <p>It has integration with Postman, an API platform that simplifies each step of the REST API
+                            development lifecycle.</p>
+                    </div>
+                    <div class="description">
+                        <div class="icon"><img src="{{ asset('images/app/icon/migrate.svg') }}"
+                                               alt="Generate Database Migrations"></div>
+                        <p>You can generate and run database migrations easily for fast deployment.</p>
+                    </div>
+                    <div class="description">
+                        <div class="icon"><img src="{{ asset('images/app/icon/integration.svg') }}"
+                                               alt="List Endpoints"></div>
+                        <p>You can quickly list all endpoints for a global review of the REST API with <span
+                                    class="script">php ./bin/cli.php route:list</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list"
+         style="background: url('images/app/hashtag-green.svg') no-repeat right center;background-color: #fff">
+        <div class="container">
+            <div class="row">
+                <h2>The best there is at what we do</h2>
+            </div>
+            <div class="row boxes">
+                <div class="col-lg-7 col-md-12 col-sm-12 box-header">
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">&nbsp;</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        Dotkernel
+                    </div>
+                </div>
+            </div>
+            <div class="row boxes">
+                <div class="col-lg-7 col-md-12 col-sm-12 box box-bar">
+                    <div class="col-lg-4 col-md-4 col-sm-4 bar-first">API First</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-orange bar-50">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="col-lg-4 bar-grey">
+                            <div class="bar-green bar-100">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 bar-description">
+                    <p>Dotkernel API is API-first, so you don’t need to install additional packages for e.g. token
+                        authentication.</p>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 box box-bar">
+                    <div class="col-lg-4 col-md-4 col-sm-4 bar-first">Code Control</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-orange bar-65">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-green bar-80">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 bar-description">
+                    <p>Dotkernel API’s code architecture is structured in a way which helps developers that are still
+                        unfamiliar with it to understand where everything goes.</p>
+                </div>
+                <div class="col-lg-7 box box-bar">
+                    <div class="col-lg-4 col-md-4 col-sm-4 bar-first">Request Management</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-orange bar-50">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-green bar-90">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 bar-description">
+                    <p>Dotkernel API uses the ResponseInterface defined in PSR-7 which helps teams manage
+                        request/responses easier.</p>
+                </div>
+                <div class="col-lg-7 box box-bar">
+                    <div class="col-lg-4 col-md-4 col-sm-4 bar-first">PHP Standardization</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-orange bar-25">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 align">
+                        <div class="bar-grey">
+                            <div class="bar-green bar-100">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 bar-description">
+                    <p>Dotkernel API is a collection of PSR-7 Middleware applications that implements these standards:
+                        PSR-3, PSR-4, PSR-11 and PSR-15.
+                        They are outlined by the PHP Framework Interop Group that aims to provide standardization of
+                        programming concepts in PHP.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list flow-graphs hide-mobile" id="middleware-flow">
+        <div class="container">
+            <div class="row">
+                <h2>Middleware Flow</h2>
+            </div>
+            <p>The graph below demonstrates a default flow between Dotkernel's middlewares.</p>
+        </div>
+    </div>
+
+    <div class="flow-graphs middlewares hide-mobile">
+        <div class="flow-container">
+            <div class="box-big gray-gradient">
+                <div class="title">ErrorHandlerInterface</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">Other Middlewares (Optional)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">CorsMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">RouteMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">Other Middlewares (Optional)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">ContentNegotiationMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">ResponseHeaderMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">UrlHelperMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">AuthenticationMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">AutorizationMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big blue-gradient">
+                <div class="title">DispatchMiddleware</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+            <div class="two-arrows">
+                <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+            </div>
+
+            <div class="box-big gray-gradient">
+                <div class="title">NotFoundHandler (Fallback)</div>
+                <div class="box-small request">
+                    <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                    <div class="text">Request</div>
+                    <div class="button">Route</div>
+                </div>
+                <div class="box-small response">
+                    <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                    Response
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list flow-graphs hide-mobile" id="library-flow">
+        <div class="container">
+            <div class="row">
+                <h2>Default Library Flow</h2>
+            </div>
+            <p>The graph below demonstrates a default flow between Dotkernel's libraries.</p>
+        </div>
+    </div>
+
+    <div class="flow-graphs libraries hide-mobile">
+        <div class="flow-container">
+            <div class="row">
+                <div class="box black">Request</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-errorhandler</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-cors</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-router</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-response-header</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-helpers</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authentication</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authorization</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row" style="display: flex">
+                <div class="box blue">mezzio/mezzio-router</div>
+                <div class="arrow-right"
+                     style="background: url('/images/app/icon/arrow-right.svg') no-repeat center;"></div>
+                <div class="box blue">laminas/laminas-diactoros - (NotFound)</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-dependency-injection</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">doctrine/orm</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-hal</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box purple">laminas/laminas-diactoros</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">psr/http-message</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box black">Response</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-list flow-graphs hide-mobile" id="library-email-flow">
+        <div class="container">
+            <div class="row">
+                <h2>Library Flow for Email</h2>
+            </div>
+            <p>The graph below demonstrates the simplified flow between Dotkernel's libraries for sending an email.</p>
+        </div>
+    </div>
+
+    <div class="flow-graphs libraries hide-mobile">
+        <div class="flow-container">
+            <div class="row">
+                <div class="box black">Request</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-errorhandler</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-cors</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-router</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-response-header</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-helpers</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authentication</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-authorization</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row" style="display: flex">
+                <div class="box blue">mezzio/mezzio-router</div>
+                <div class="arrow-right"
+                     style="background: url('/images/app/icon/arrow-right.svg') no-repeat center;"></div>
+                <div class="box blue">laminas/laminas-diactoros - (NotFound)</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-dependency-injection</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">doctrine/orm</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box white">dotkernel/dot-mail</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box blue">mezzio/mezzio-hal</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box purple">laminas/laminas-diactoros</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box yellow">psr/http-message</div>
+            </div>
+            <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
+            <div class="row">
+                <div class="box black">Response</div>
             </div>
         </div>
     </div>
