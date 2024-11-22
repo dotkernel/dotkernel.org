@@ -12879,16 +12879,17 @@ label {
 }
 .home-intro .laminas {
   width: 200px;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .home-intro .laminas {
     width: 100px;
+    margin-top: 6px;
   }
 }
 .home-intro .mezzio {
   width: 70px;
   height: 60px;
-  padding-left: 10px;
 }
 @media (max-width: 768px) {
   .home-intro .mezzio {
@@ -12898,6 +12899,8 @@ label {
 }
 .home-intro .mezzio-title {
   color: #013755;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
   font-size: 55px;
   line-height: 55px;
   padding-left: 10px;
@@ -12906,6 +12909,7 @@ label {
   .home-intro .mezzio-title {
     font-size: 27px;
     line-height: 27px;
+    padding-left: 5px;
   }
 }
 
@@ -12913,7 +12917,7 @@ label {
   font-family: "Space Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 92px;
+  font-size: 70px;
   line-height: 95px;
   color: #000000;
 }
@@ -12934,9 +12938,10 @@ label {
   height: 103px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .home-intro h1, .home-intro .h1 {
     font-size: 60px;
+    line-height: 75px;
   }
 }
 @media (max-width: 768px) {
