@@ -12550,7 +12550,7 @@ label {
   justify-content: flex-end;
 }
 .navbar .menu ul, .navbar .menu-items ul {
-  gap: 30px;
+  gap: 0;
   align-items: end;
 }
 .navbar .menu ul li, .navbar .menu-items ul li {
@@ -12575,6 +12575,9 @@ label {
 @media (max-width: 991px) {
   .navbar .menu {
     display: none;
+  }
+  .navbar .menu.show {
+    display: block;
   }
   .navbar .menu-items {
     justify-content: flex-end;
