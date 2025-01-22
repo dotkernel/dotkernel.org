@@ -12561,6 +12561,8 @@ label {
   line-height: 43px;
   display: inline-block;
   text-align: right;
+  padding: 0 10px;
+  border-left: 1px solid black;
 }
 .navbar .menu .nav-link, .navbar .menu-items .nav-link {
   color: black;
