@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         <title>PHP skeleton to build REST API | {% block title %}{% endblock %}</title>
-        {% block canonical %}
-            <link rel="canonical" href="{{ url(routeName ?? null) }}" />
-        {% endblock %}
+        {% block canonical %}<link rel="canonical" href="{{ url(routeName ?? null) }}" />{% endblock %}
 
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/app/favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/app/favicon/favicon-32x32.png') }}">
@@ -24,14 +22,14 @@
         <meta name="twitter:description"
               content="An opinionated framework-less tool aimed at intermediate-to-advanced level programmers to start
            implementing REST APIs swiftly and efficiently.">
-        <meta name="twitter:image" content="{{ url('home') }}images/app/twitter-card-api.png">
+        <meta name="twitter:image" content="{{ url('app::index') }}images/app/twitter-card-api.png">
         <meta name="twitter:image:alt" content="PHP REST API application | Dotkernel Application">
 
         <!-- OpenGraph card -->
         <meta property="og:title" content="PHP REST API application | Dotkernel Application"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="{{ url('home') }}"/>
-        <meta property="og:image" content="{{ url('home') }}images/app/twitter-card-api.png"/>
+        <meta property="og:url" content="{{ url('app::index') }}"/>
+        <meta property="og:image" content="{{ url('app::index') }}images/app/twitter-card-api.png"/>
         <meta property="og:description"
               content="An opinionated framework-less tool aimed at intermediate-to-advanced level programmers to start
           implementing REST APIs swiftly and efficiently."/>
