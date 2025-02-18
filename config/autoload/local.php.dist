@@ -13,6 +13,13 @@ $baseUrl = 'http://light.dotkernel.localhost';
 
 return [
     'application' => [
-        'url'  => $baseUrl,
+        'url' => $baseUrl,
+    ],
+    'routes'      => [
+        'page' => [
+            'flowMiddlewares'    => 'flow-middlewares',
+            'flowLibraries'      => 'flow-libraries',
+            'flowLibrariesEmail' => 'flow-libraries-email',
+        ],
     ],
 ];
