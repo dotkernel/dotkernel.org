@@ -39,8 +39,9 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:200,300,400,500,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
 
-        <link href="{{ asset('css/app.css?v=3') }}" rel="stylesheet" />
+        <link href="{{ asset('css/app.css?v=4') }}" rel="stylesheet" />
 
         {% block stylesheets %}{% endblock %}
     </head>
@@ -51,7 +52,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container">
                         <a href="/" class="navbar-brand">
-                            <img src="{{ asset('images/app/logo-red-full.svg') }}" alt="Dotkernel API"/>
+                            <img src="{{ asset('images/app/logo-blue.png') }}" alt="Dotkernel API"/>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,11 +66,16 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" target="_blank" href="https://www.dotkernel.com/">Dotkernel
-                                        Applications (Skeletons)</a>
+                                        Applications</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" target="_blank" href="https://www.dotkernel.com/blog/">Blog</a>
                                 </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-right">
+                            <ul class="">
                                 <li class="button-border">
                                     <a class="nav-link" target="_blank" href="https://github.com/dotkernel/api">GitHub</a>
                                 </li>

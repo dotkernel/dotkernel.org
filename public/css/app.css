@@ -12535,23 +12535,27 @@ label {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  background-color: #E5F6E3 !important;
+  background-color: #E7EAFF !important;
   border: 0;
-  border-bottom: 1px solid #F6F6F6;
   padding: 30px 0;
+}
+.navbar .container {
+  max-width: 1192px;
+}
+.navbar .navbar-brand {
+  width: 25%;
 }
 .navbar .button-border {
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #fff;
   padding: 10px 25px;
 }
 .navbar .menu, .navbar .menu-items {
-  justify-content: flex-end;
+  width: 50%;
+  display: flex;
 }
 .navbar .menu ul, .navbar .menu-items ul {
-  gap: 0;
-  align-items: end;
+  margin: auto;
 }
 .navbar .menu ul li, .navbar .menu-items ul li {
   width: fit-content !important;
@@ -12559,20 +12563,31 @@ label {
 }
 .navbar .menu .nav-item, .navbar .menu-items .nav-item {
   line-height: 43px;
-  display: inline-block;
   text-align: right;
-  padding: 0 10px;
-  border-left: 1px solid black;
+  padding: 0 20px;
 }
 .navbar .menu .nav-link, .navbar .menu-items .nav-link {
-  color: black;
+  color: #282222;
   padding: 0;
 }
 .navbar .menu a, .navbar .menu-items a {
   display: flex;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   float: right;
+}
+.navbar .menu-right {
+  width: 25%;
+}
+.navbar .menu-right ul {
+  display: flex;
+  float: right;
+  list-style-type: none;
+}
+.navbar .menu-right a {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Raleway;
 }
 @media (max-width: 991px) {
   .navbar .menu {
@@ -12761,7 +12776,7 @@ label {
 .page-intro {
   position: relative;
   padding: 80px 0;
-  background: linear-gradient(180deg, #E5F6E3 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #E7EAFF 0%, #FFFFFF 100%);
 }
 .page-intro h2, .page-intro .h2 {
   margin: 0 0 50px 0;
@@ -12807,9 +12822,12 @@ label {
   font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 140%;
   color: #000000;
+  text-align: center;
+  width: 380px;
+  margin: 20px auto;
 }
 @media (max-width: 500px) {
   .home-intro .subtext {
@@ -12862,7 +12880,7 @@ label {
 }
 /** Home page **/
 .home-intro {
-  background: linear-gradient(180deg, #E5F6E3 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #E7EAFF 0%, #FFFFFF 100%);
   padding: 30px 0;
 }
 @media (min-width: 1550px) {
@@ -12874,8 +12892,33 @@ label {
   width: 100%;
 }
 .home-intro .title {
-  padding-bottom: 30px;
   margin: auto;
+  width: 640px;
+}
+.home-intro .title .buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.home-intro .title .dark-button {
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(90deg, #221F1F 0%, #4B67F9 100%);
+}
+.home-intro .title .dark-button a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.home-intro .title .light-button {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.home-intro .title .light-button a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
 }
 .home-intro .logo-third-party {
   display: flex;
@@ -12883,8 +12926,8 @@ label {
   margin-top: 30px;
 }
 .home-intro .laminas {
-  width: 200px;
-  margin-top: 20px;
+  width: 175px;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
   .home-intro .laminas {
@@ -12893,8 +12936,9 @@ label {
   }
 }
 .home-intro .mezzio {
-  width: 70px;
-  height: 60px;
+  width: 65px;
+  height: 80px;
+  padding: 10px 0;
 }
 @media (max-width: 768px) {
   .home-intro .mezzio {
@@ -12906,9 +12950,7 @@ label {
   color: #013755;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-size: 55px;
-  line-height: 55px;
-  padding-left: 10px;
+  font-size: 40px;
 }
 @media (max-width: 768px) {
   .home-intro .mezzio-title {
@@ -12921,10 +12963,10 @@ label {
 .home-intro h1, .home-intro .h1 {
   font-family: "Space Grotesk", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 70px;
-  line-height: 95px;
+  font-weight: 500;
+  font-size: 52px;
   color: #000000;
+  text-align: center;
 }
 
 .home-intro .arrow_down {
@@ -12959,18 +13001,19 @@ label {
   }
 }
 .home-list {
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding-top: 100px;
 }
 .home-list p {
   color: #00110f;
 }
 
+.boxes .item {
+  width: 50%;
+}
 .boxes .box {
   border: 1px solid black;
   border-radius: 20px;
-  padding: 40px 60px;
-  box-shadow: 10px 10px 0 0 rgba(13, 95, 255, 0.3019607843);
+  padding: 20px 40px;
   background-color: #fff;
 }
 @media (max-width: 1199px) {
@@ -13032,16 +13075,17 @@ label {
   text-transform: uppercase;
   line-height: 12px;
   letter-spacing: 0.15em;
-  color: #C71F38;
+  color: #4B67F9;
   margin: 0;
 }
 .boxes h4, .boxes .h4 {
   padding: 20px 0;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   color: #00110f;
   margin: 0;
+  text-align: left;
 }
 @media (max-width: 1199px) {
   .boxes h4, .boxes .h4 {
@@ -13055,17 +13099,21 @@ label {
 }
 .boxes p {
   margin: auto;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
 }
 .boxes .description {
-  display: flex;
-  margin-bottom: 20px;
+  margin: 0 20px 50px;
+  width: 33%;
 }
 .boxes .main-text {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 400;
   line-height: 48px;
-  padding-right: 130px;
+  margin: 40px auto 70px;
+  width: 1000px;
 }
 @media (max-width: 1199px) {
   .boxes .main-text {
@@ -13082,7 +13130,7 @@ label {
 }
 .boxes .main-text span {
   font-weight: 700;
-  color: #bd1f3d;
+  color: #4B67F9;
 }
 .boxes .icon {
   background-color: #E4EDFF;
@@ -13121,6 +13169,7 @@ label {
   text-transform: uppercase;
   margin: auto;
   width: 33%;
+  text-align: left;
 }
 @media (max-width: 1199px) {
   .boxes .bar-first {
@@ -13140,6 +13189,7 @@ label {
   margin: 20px 15px 20px 10px;
   display: flex;
   justify-content: space-between;
+  height: 100px;
 }
 @media (max-width: 767px) {
   .boxes .box-bar {
@@ -13174,7 +13224,7 @@ label {
   }
 }
 .boxes .bar-grey {
-  height: 32px;
+  height: 20px;
   width: 150px;
   border-radius: 16px;
   background-color: #F0F0F0;
@@ -13188,7 +13238,7 @@ label {
 }
 @media (max-width: 991px) {
   .boxes .bar-grey {
-    height: 32px;
+    height: 20px;
     width: 150px;
     border-radius: 16px;
   }
@@ -13208,9 +13258,9 @@ label {
   }
 }
 .boxes .bar-orange {
-  height: 32px;
+  height: 20px;
   border-radius: 16px;
-  background-color: #F05700;
+  background-color: #C71F38;
 }
 @media (max-width: 1199px) {
   .boxes .bar-orange {
@@ -13237,9 +13287,9 @@ label {
   }
 }
 .boxes .bar-green {
-  height: 32px;
+  height: 20px;
   border-radius: 16px;
-  background-color: #54A957;
+  background-color: #4B67F9;
 }
 @media (max-width: 1199px) {
   .boxes .bar-green {
@@ -13426,6 +13476,18 @@ label {
   color: #2C2C2C;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
+}
+
+.home-list .boxes {
+  text-align: center;
+  margin: auto;
+}
+.home-list .boxes .content {
+  display: flex;
+  gap: 50px;
+}
+.home-list .boxes .content .item {
+  width: 25%;
 }
 
 .home-list .card {
@@ -13615,7 +13677,7 @@ label {
 .flow-graphs .box-big {
   width: 1016px;
   height: 110px;
-  border: 1px solid #000;
+  border: 1px solid #8D8D8D;
   border-radius: 20px;
   color: #000;
   font-family: "Space Grotesk", sans-serif;
@@ -13635,7 +13697,7 @@ label {
 }
 .flow-graphs .box-big .title {
   width: 460px;
-  padding: 20px;
+  padding: 16px;
 }
 @media (max-width: 1199px) {
   .flow-graphs .box-big .title {
@@ -13657,11 +13719,11 @@ label {
 .flow-graphs .box-big .box-small {
   width: 245px;
   height: 64px;
-  border: 1px solid #000;
+  border: 1px solid #8D8D8D;
   border-radius: 20px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 30px;
   background-color: #fff;
   margin: 0 20px 0 0;
@@ -13684,7 +13746,8 @@ label {
   height: 32px;
   border: 1px solid #000;
   border-radius: 20px;
-  background-color: #CDE4CE;
+  background-color: #4B67F9;
+  color: white;
   text-align: center;
   line-height: 28px;
   margin-left: 39px;
