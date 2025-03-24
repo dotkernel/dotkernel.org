@@ -137,6 +137,11 @@ label {
   .menu-right {
     width: 25%;
 
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+
     ul {
       display: flex;
       float: right;
@@ -146,11 +151,13 @@ label {
     a {
       font-size: 16px;
       font-weight: 600;
-      font-family: Raleway;
+      font-family: 'Raleway', sans-serif;
     }
   }
 
   @media (max-width: 991px) {
+    padding: 10px 0;
+
     .menu {
       display: none;
     }
@@ -266,8 +273,8 @@ label {
     .navbar-brand {
       img {
         display: block;
-        width: 230px;
-        height: 40px;
+        width: 192px;
+        height: 30px;
       }
 
       .company {

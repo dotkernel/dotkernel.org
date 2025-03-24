@@ -12574,6 +12574,12 @@ label {
 .navbar .menu-right {
   width: 25%;
 }
+@media (max-width: 991px) {
+  .navbar .menu-right {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 .navbar .menu-right ul {
   display: flex;
   float: right;
@@ -12582,9 +12588,12 @@ label {
 .navbar .menu-right a {
   font-size: 16px;
   font-weight: 600;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
 }
 @media (max-width: 991px) {
+  .navbar {
+    padding: 10px 0;
+  }
   .navbar .menu {
     display: none;
   }
@@ -12673,8 +12682,8 @@ label {
   }
   .navbar .navbar-brand img {
     display: block;
-    width: 230px;
-    height: 40px;
+    width: 192px;
+    height: 30px;
   }
   .navbar .navbar-brand .company {
     width: 170px;
@@ -12947,8 +12956,8 @@ label {
 }
 @media (max-width: 768px) {
   .home-intro .mezzio {
-    width: 35px;
-    height: 27px;
+    width: 30px;
+    height: 50px;
   }
 }
 .home-intro .mezzio-title {
@@ -13008,6 +13017,11 @@ label {
 .home-list {
   padding-top: 100px;
 }
+@media (max-width: 991px) {
+  .home-list {
+    padding-top: 10px;
+  }
+}
 .home-list p {
   color: #00110f;
   justify-content: center;
@@ -13016,6 +13030,11 @@ label {
 
 .boxes .item {
   width: 50%;
+}
+@media (max-width: 991px) {
+  .boxes .item {
+    width: 100%;
+  }
 }
 .boxes .box {
   border: 1px solid black;
@@ -13114,6 +13133,12 @@ label {
 .boxes .description {
   margin: 0 20px 50px;
   width: 33%;
+}
+@media (max-width: 991px) {
+  .boxes .description {
+    margin: 20px 0;
+    width: 100%;
+  }
 }
 .boxes .description p {
   display: block;
@@ -13502,8 +13527,19 @@ label {
   display: flex;
   gap: 50px;
 }
+@media (max-width: 991px) {
+  .home-list .boxes .content {
+    display: block;
+  }
+}
 .home-list .boxes .content .item {
   width: 25%;
+}
+@media (max-width: 991px) {
+  .home-list .boxes .content .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .home-list .card {
@@ -13576,7 +13612,7 @@ label {
   .home-list h2, .home-list .h2,
   .home-list h2 a,
   .home-list .h2 a {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 @media (max-width: 767px) {
