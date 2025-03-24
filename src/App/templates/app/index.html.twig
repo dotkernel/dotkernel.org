@@ -5,7 +5,7 @@
 {% block page_title %}{% endblock %}
 
 {% block content %}
-    <div class="home-intro">
+    <div class="home-intro" style="background: top / cover no-repeat url('{{ asset('images/app/hero-background.png') }}'), linear-gradient(180deg, #E7EAFF 0%, #FFFFFF 100%);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 title">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="content-background" style="background-image: url('{{ asset('images/app/bigK-bg.png') }}');background-repeat: repeat-y;background-position: center top;">
+    <div class="content-background" style="background-image: url('{{ asset('images/app/bigK-bg.png') }}');background-repeat: repeat-y;background-position: center top;background-size: contain;">
         <div class="home-list">
             <div class="container">
                 <div class="row boxes">
@@ -104,7 +104,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 offset">
                         <div class="box box-right">
                             <p class="top-text">
                                 Modern Technologies

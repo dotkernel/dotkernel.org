@@ -12530,7 +12530,7 @@ label {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  background-color: #E7EAFF !important;
+  background-color: #EAEEFF !important;
   border: 0;
   padding: 30px 0;
 }
@@ -12895,8 +12895,15 @@ label {
 }
 /** Home page **/
 .home-intro {
-  background: linear-gradient(180deg, #E7EAFF 0%, #FFFFFF 100%);
-  padding: 30px 0;
+  padding: 165px 0;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+@media (max-width: 991px) {
+  .home-intro {
+    padding: 20px 0;
+  }
 }
 @media (min-width: 1550px) {
   .home-intro .container {
@@ -13000,12 +13007,6 @@ label {
   height: 103px;
 }
 
-@media (max-width: 1200px) {
-  .home-intro h1, .home-intro .h1 {
-    font-size: 60px;
-    line-height: 75px;
-  }
-}
 @media (max-width: 768px) {
   .home-intro h1, .home-intro .h1 {
     font-size: 30px;
@@ -13022,11 +13023,11 @@ label {
   }
 }
 .home-list {
-  padding-top: 100px;
+  padding-bottom: 100px;
 }
 @media (max-width: 991px) {
   .home-list {
-    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .home-list p {
@@ -13046,7 +13047,7 @@ label {
 .boxes .box {
   border: 1px solid black;
   border-radius: 20px;
-  padding: 20px 40px;
+  padding: 50px;
   background: rgba(255, 255, 255, 0.6901960784);
 }
 @media (max-width: 1199px) {
@@ -13086,7 +13087,7 @@ label {
   text-decoration: none;
 }
 .boxes .box-left {
-  margin: 20px 15px 60px 0;
+  margin: 20px 25px 60px 0;
 }
 @media (max-width: 767px) {
   .boxes .box-left {
@@ -13094,7 +13095,7 @@ label {
   }
 }
 .boxes .box-right {
-  margin: 20px 0 60px 15px;
+  margin: 20px 0 60px 25px;
 }
 @media (max-width: 767px) {
   .boxes .box-right {
@@ -13230,9 +13231,11 @@ label {
 .boxes .align {
   margin: auto 5px;
   width: 32%;
+  white-space: nowrap;
 }
 .boxes .box-bar {
   margin: 20px 15px 20px 10px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -13248,7 +13251,7 @@ label {
   display: flex;
   justify-content: space-between;
   padding: 0 100px 0 55px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -13273,7 +13276,7 @@ label {
   height: 20px;
   width: 150px;
   border-radius: 16px;
-  background-color: #F0F0F0;
+  background-color: #D9D9D9;
 }
 @media (max-width: 1199px) {
   .boxes .bar-grey {
@@ -13548,6 +13551,14 @@ label {
     margin-bottom: 20px;
   }
 }
+.home-list .boxes .offset {
+  margin-top: 40px;
+}
+@media (max-width: 991px) {
+  .home-list .boxes .offset {
+    margin-top: 0;
+  }
+}
 
 .home-list .card {
   border: none;
@@ -13703,7 +13714,7 @@ label {
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  line-height: 47px;
+  line-height: 48px;
 }
 .flow-graphs .arrow-down {
   height: 30px;
