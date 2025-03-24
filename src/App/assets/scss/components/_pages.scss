@@ -359,6 +359,14 @@
   .description {
     margin: 0 20px 50px;
     width: 33%;
+
+    p {
+      display: block;
+
+      .script {
+        font-style: italic;
+      }
+    }
   }
 
   .main-text {
