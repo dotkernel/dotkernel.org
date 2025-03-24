@@ -102,14 +102,14 @@ label {
   }
 
   .menu, .menu-items {
-    width: 50%;
-    display: flex;
+    width: 100%;
+    float: right;
 
     ul {
       margin: auto;
 
       li {
-        width: fit-content !important;
+        width: fit-content;
         float: right;
       }
     }
@@ -118,6 +118,7 @@ label {
       line-height: 43px;
       text-align: right;
       padding: 0 20px;
+      width: 100%;
     }
 
     .nav-link {

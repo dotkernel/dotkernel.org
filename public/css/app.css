@@ -12546,20 +12546,21 @@ label {
   padding: 10px 25px;
 }
 .navbar .menu, .navbar .menu-items {
-  width: 50%;
-  display: flex;
+  width: 100%;
+  float: right;
 }
 .navbar .menu ul, .navbar .menu-items ul {
   margin: auto;
 }
 .navbar .menu ul li, .navbar .menu-items ul li {
-  width: fit-content !important;
+  width: fit-content;
   float: right;
 }
 .navbar .menu .nav-item, .navbar .menu-items .nav-item {
   line-height: 43px;
   text-align: right;
   padding: 0 20px;
+  width: 100%;
 }
 .navbar .menu .nav-link, .navbar .menu-items .nav-link {
   color: #282222;
@@ -13012,6 +13013,12 @@ label {
   }
   .home-intro .arrow_down .arrow_down_content {
     width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .content-background {
+    background-position: left top;
+    background-size: contain;
   }
 }
 .home-list {

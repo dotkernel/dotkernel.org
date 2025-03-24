@@ -244,6 +244,13 @@
   }
 }
 
+@media (max-width: 991px) {
+  .content-background {
+    background-position: left top;
+    background-size: contain;
+  }
+}
+
 .home-list {
   padding-top: 100px;
   @media (max-width: 991px) {
