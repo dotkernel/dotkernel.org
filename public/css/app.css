@@ -13197,7 +13197,7 @@ label {
 }
 .boxes .align {
   margin: auto 5px;
-  width: 33%;
+  width: 32%;
 }
 .boxes .box-bar {
   margin: 20px 15px 20px 10px;
@@ -13215,7 +13215,7 @@ label {
   margin: 20px 15px 10px 10px;
   display: flex;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 0 100px 0 55px;
   font-size: 24px;
   font-weight: 700;
   font-family: "Space Grotesk", sans-serif;
