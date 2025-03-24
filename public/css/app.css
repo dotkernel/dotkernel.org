@@ -12527,11 +12527,6 @@ label {
   color: #B1B1B1;
 }
 
-.container-border {
-  border-top: 2px solid gray;
-  padding-top: 20px;
-}
-
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
@@ -12635,39 +12630,6 @@ label {
   padding-top: 80px;
   padding-bottom: 50px;
 }
-.navbar .app-footer {
-  padding: 60px;
-  background: #fff;
-}
-.navbar .app-footer .title {
-  margin-bottom: 30px;
-}
-.navbar .app-footer .container {
-  max-width: 1540px;
-  border-top: 2px solid gray !important;
-}
-.navbar .app-footer p {
-  margin-bottom: 0;
-  font-size: 14px;
-}
-.navbar .app-footer h2, .navbar .app-footer .h2 {
-  font-weight: 700;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 24px;
-}
-.navbar .app-footer .margin-small {
-  margin-bottom: 10px;
-}
-.navbar .app-footer .margin-large {
-  margin-bottom: 30px;
-}
-.navbar .app-footer .enjoy {
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: #3B3B3B;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-}
 .navbar .alert ul {
   display: block;
   margin: 0;
@@ -12719,6 +12681,35 @@ label {
   }
 }
 
+.app-footer {
+  padding: 70px 0 50px;
+  background: #E8F0FF;
+}
+.app-footer .title {
+  margin-bottom: 30px;
+}
+.app-footer .container {
+  max-width: 1192px;
+}
+.app-footer h2, .app-footer .h2 {
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+}
+.app-footer .margin-small {
+  margin-bottom: 5px;
+}
+.app-footer .margin-large {
+  margin-bottom: 30px;
+}
+.app-footer .enjoy {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #3B3B3B;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
 .footer-item-support {
   padding-top: 2px;
 }
@@ -12743,28 +12734,42 @@ label {
   text-decoration: underline;
 }
 
-.footer-headline {
+.footer-text {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-.footer-headline a {
+.footer-text a {
   color: #4B67F9;
   text-decoration: none;
 }
-.footer-headline a:hover {
+.footer-text a:hover {
   color: #4B67F9;
   text-decoration: underline;
 }
 
-.dk_widget {
+.footer-item {
   font-family: Barlow, serif;
   padding: 20px 10px;
 }
 
 .footer-item-title {
-  font-weight: bold !important;
+  font-weight: 700;
   font-family: "Barlow", sans-serif;
-  font-size: 18px;
   margin-bottom: 10px;
+  color: #2943CA;
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(142, 142, 142, 0.4);
+  background: #E8F0FF;
+  color: #A6A6A6;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22.5px;
+  padding: 30px 0;
+  justify-content: center;
 }
 
 @media (max-width: 991px) {
@@ -12824,7 +12829,7 @@ label {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  color: #000000;
+  color: #282222;
   text-align: center;
   width: 380px;
   margin: 20px auto;
@@ -12965,7 +12970,7 @@ label {
   font-style: normal;
   font-weight: 500;
   font-size: 52px;
-  color: #000000;
+  color: #232323;
   text-align: center;
 }
 
@@ -13005,6 +13010,8 @@ label {
 }
 .home-list p {
   color: #00110f;
+  justify-content: center;
+  display: flex;
 }
 
 .boxes .item {
@@ -13014,7 +13021,7 @@ label {
   border: 1px solid black;
   border-radius: 20px;
   padding: 20px 40px;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.6901960784);
 }
 @media (max-width: 1199px) {
   .boxes .box {
@@ -13077,6 +13084,7 @@ label {
   letter-spacing: 0.15em;
   color: #4B67F9;
   margin: 0;
+  justify-content: left;
 }
 .boxes h4, .boxes .h4 {
   padding: 20px 0;
@@ -13464,11 +13472,13 @@ label {
 }
 
 .home-list h2, .home-list .h2 {
-  margin: 50px 0;
+  margin: 50px 0 20px;
   font-weight: 700;
   color: #2C2C2C;
   font-family: "Space Grotesk", sans-serif;
   font-size: 42px;
+  justify-content: center;
+  display: flex;
 }
 
 .home-list h3 a, .home-list .h3 a {
@@ -13627,7 +13637,7 @@ label {
 }
 
 .flow-graphs {
-  margin: 0 auto 100px;
+  margin: 0 auto 60px;
   padding-bottom: 0;
 }
 .flow-graphs .flow-container {
@@ -13639,6 +13649,7 @@ label {
   border: 1px solid #000;
   border-radius: 20px;
   color: #000;
+  background: rgba(255, 255, 255, 0.6901960784);
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -13654,31 +13665,32 @@ label {
   width: 50px;
 }
 .flow-graphs .black {
-  background-color: #000;
+  background-color: #4B67F9;
   color: #fff;
-  box-shadow: 10px 10px 0 0 rgba(159, 159, 159, 0.3019607843);
+  border: 1px solid #4B67F9;
 }
 .flow-graphs .white {
-  background-color: #fff;
-  box-shadow: 10px 10px 0 0 rgba(255, 138, 0, 0.3019607843);
+  box-shadow: 8px 8px 20px 0 rgba(255, 216, 170, 0.2);
+  border: 1px solid var(--Pink-stroke, rgba(222, 172, 172, 0.4));
 }
 .flow-graphs .blue {
-  background-color: #D9F3F8;
-  box-shadow: 10px 10px 0 0 rgba(3, 112, 133, 0.3019607843);
+  box-shadow: 8px 8px 20px 0 rgba(139, 185, 193, 0.2);
+  border: 1px solid var(--Color-blue-stroke, rgba(19, 110, 128, 0.2509803922));
 }
 .flow-graphs .purple {
-  background-color: #E2ECFF;
-  box-shadow: 10px 10px 0 0 rgba(0, 72, 212, 0.3019607843);
+  box-shadow: 8px 8px 20px 0 rgba(145, 166, 206, 0.3019607843);
+  border: 1px solid var(--ColorGreen-stroke, rgba(84, 169, 87, 0.4));
 }
 .flow-graphs .yellow {
-  background-color: #F9FFF0;
-  box-shadow: 10px 10px 0 0 rgba(27, 108, 7, 0.3019607843);
+  box-shadow: 8px 8px 20px 0 rgba(213, 255, 203, 0.3019607843);
+  border: 1px solid var(--Color-lilla-stroke, rgba(115, 122, 194, 0.4));
 }
 .flow-graphs .box-big {
   width: 1016px;
   height: 110px;
   border: 1px solid #8D8D8D;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6901960784);
   color: #000;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
@@ -13698,6 +13710,7 @@ label {
 .flow-graphs .box-big .title {
   width: 460px;
   padding: 16px;
+  line-height: 32px;
 }
 @media (max-width: 1199px) {
   .flow-graphs .box-big .title {
@@ -13723,7 +13736,7 @@ label {
   border-radius: 20px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 30px;
   background-color: #fff;
   margin: 0 20px 0 0;
@@ -13744,12 +13757,11 @@ label {
 .flow-graphs .box-big .box-small .button {
   width: 91px;
   height: 32px;
-  border: 1px solid #000;
   border-radius: 20px;
   background-color: #4B67F9;
   color: white;
   text-align: center;
-  line-height: 28px;
+  line-height: 32px;
   margin-left: 39px;
 }
 .flow-graphs .gray-gradient {

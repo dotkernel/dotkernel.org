@@ -46,7 +46,7 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body class="app {% block body_class %}{% endblock %}">
-        <div id="wrapper">
+        <div id="wrapper" style="background-image: url('{{ asset('images/app/bigK-bg.png') }}');background-repeat: repeat-y;background-position: center; ">
             <header class="app-header">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -102,43 +102,14 @@
         </div>
 
         <footer class="app-footer">
-            <div class="container container-border">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="footer_head">
-                            <h2>Dotkernel</h2>
+                            <img src="{{ asset('images/app/logo-blue.png') }}" alt="Dotkernel API"/>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 dk_widget">
-                                <p class="footer-item-title">
-                                    Dotkernel API
-                                </p>
-                                <p class="footer-item-link margin-small">
-                                    <a href="https://github.com/dotkernel" target="_blank">
-                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
-                                        Go to Git
-                                    </a>
-                                </p>
-                                <p class="footer-item-link margin-small">
-                                    <a href="/page/flowMiddlewares">
-                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
-                                        Middleware Flow
-                                    </a>
-                                </p>
-                                <p class="footer-item-link margin-small">
-                                    <a href="/page/flowLibraries">
-                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
-                                        Default Library Flow
-                                    </a>
-                                </p>
-                                <p class="footer-item-link margin-large">
-                                    <a href="/page/flowLibrariesEmail">
-                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
-                                        Library Flow for Email
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="col-md-6 dk_widget">
+                            <div class="col-md-4 footer-item">
                                 <p class="footer-item-title">
                                     Dotkernel All Repositories
                                 </p>
@@ -167,40 +138,75 @@
                                     </a>
                                 </p>
                             </div>
+                            <div class="col-md-4 footer-item">
+                                <p class="footer-item-title">
+                                    Dotkernel API
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="https://github.com/dotkernel" target="_blank">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Go to Git
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="/page/flowMiddlewares">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Middleware Flow
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-small">
+                                    <a href="/page/flowLibraries">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Default Library Flow
+                                    </a>
+                                </p>
+                                <p class="footer-item-link margin-large">
+                                    <a href="/page/flowLibrariesEmail">
+                                        <img src="{{ asset('images/app/icon/hand.svg') }}">
+                                        Library Flow for Email
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 footer-item">
+                                <p class="footer-item-title">
+                                    Support
+                                </p>
+                                <p class="footer-item-support margin-small">
+                                    <a href="https://github.com/dotkernel" target="_blank">
+                                        <img src="{{ asset('images/app/icon/vector.svg') }}">
+                                        Git
+                                    </a>
+                                </p>
+                                <p class="footer-item-support margin-small">
+                                    <a href="https://x.com/dotkernel" target="_blank">
+                                        <img src="{{ asset('images/app/icon/twitter.png') }}">
+                                        Find Us on X
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer_head">
-                            <h2>Support</h2>
-                        </div>
-                        <p class="footer-item-support margin-small">
-                            <a href="https://github.com/dotkernel" target="_blank">
-                                <img src="{{ asset('images/app/icon/vector.svg') }}">
-                                Git
-                            </a>
-                        </p>
-                        <p class="footer-item-support margin-small">
-                            <a href="https://x.com/dotkernel" target="_blank">
-                                <img src="{{ asset('images/app/icon/twitter.png') }}">
-                                Find Us on X
-                            </a>
-                        </p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <p class="footer-headline">
-                        © {{ 'now'|date('Y') }} by <a href="https://www.dotkernel.com" target="_blank">
-                         Dotkernel</a> a collection of PSR-7 Middleware applications and libraries
-                        <br>
-                        Website built on <a href="https://github.com/dotkernel/light" target="_blank">Dotkernel Light</a>
-                        <br>
-                        The Laminas logo is copyright of the
-                        <a href="https://getlaminas.org/about/foundation" target="_blank">Laminas Foundation</a>
-                    </p>
+                <div class="row footer-text">
+                    <div class="col-md-4">
+                        <p>© {{ 'now'|date('Y') }} by <a href="https://www.dotkernel.com" target="_blank">
+                         Dotkernel</a> a collection of PSR-7 Middleware applications and libraries</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>The Laminas logo is copyright of<br>the
+                            <a href="https://getlaminas.org/about/foundation" target="_blank">Laminas Foundation</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Website built on<br><a href="https://github.com/dotkernel/light" target="_blank">Dotkernel Light</a></p>
+                    </div>
                 </div>
             </div>
         </footer>
+
+        <div class="row footer-copyright">
+            © Copyright Dotkernel API 2025. All rights reserved.
+        </div>
 
         <script src="{{ asset('js/app.js?v=3') }}"></script>
         {% block javascript %}{% endblock %}
