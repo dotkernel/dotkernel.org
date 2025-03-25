@@ -12548,9 +12548,11 @@ label {
 .navbar .menu, .navbar .menu-items {
   width: 100%;
   float: right;
+  display: flex;
 }
 .navbar .menu ul, .navbar .menu-items ul {
   margin: auto;
+  float: right;
 }
 .navbar .menu ul li, .navbar .menu-items ul li {
   width: fit-content;

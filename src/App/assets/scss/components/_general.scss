@@ -104,9 +104,11 @@ label {
   .menu, .menu-items {
     width: 100%;
     float: right;
+    display: flex;
 
     ul {
       margin: auto;
+      float: right;
 
       li {
         width: fit-content;
