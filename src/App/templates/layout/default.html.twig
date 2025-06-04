@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <title>PHP skeleton to build REST API | {% block title %}{% endblock %}</title>
+        <title>{% block title %}{% endblock %} | PHP general-purpose headless platform</title>
         {% block canonical %}<link rel="canonical" href="{{ url(routeName ?? null) }}" />{% endblock %}
 
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/app/favicon/apple-touch-icon.png') }}">
@@ -18,15 +18,15 @@
         <!-- Twitter card -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@dotkernel">
-        <meta name="twitter:title" content="PHP skeleton to build REST API | Dotkernel Application">
+        <meta name="twitter:title" content="Dotkernel API | PHP general-purpose headless platform">
         <meta name="twitter:description"
               content="An opinionated framework-less tool aimed at intermediate-to-advanced level programmers to start
            implementing REST APIs swiftly and efficiently.">
         <meta name="twitter:image" content="{{ url('app::index') }}images/app/twitter-card-api.png">
-        <meta name="twitter:image:alt" content="PHP REST API application | Dotkernel Application">
+        <meta name="twitter:image:alt" content="Dotkernel API | PHP general-purpose headless platform">
 
         <!-- OpenGraph card -->
-        <meta property="og:title" content="PHP REST API application | Dotkernel Application"/>
+        <meta property="og:title" content="Dotkernel API | PHP general-purpose headless platform"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ url('app::index') }}"/>
         <meta property="og:image" content="{{ url('app::index') }}images/app/twitter-card-api.png"/>
@@ -190,7 +190,7 @@
                 <div class="row footer-text">
                     <div class="col-md-4">
                         <p>© {{ 'now'|date('Y') }} by <a href="https://www.dotkernel.com" target="_blank">
-                         Dotkernel</a> a collection of PSR-7 Middleware applications and libraries</p>
+                         Dotkernel</a> a PHP general-purpose headless platform. </p>
                     </div>
                     <div class="col-md-4">
                         <p>The Laminas logo is copyright of<br>the
