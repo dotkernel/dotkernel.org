@@ -1,3 +1,3 @@
-$(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-});
+import $ from 'jquery';
+
+$(document).ready(function () {});
