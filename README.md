@@ -9,4 +9,4 @@ The site **highlights**:
 - A comparison with other frameworks,
 - Example flows,
 - Links to relevant resources,
-- And more.
+- And more
