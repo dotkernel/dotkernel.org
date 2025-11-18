@@ -28,11 +28,11 @@
     "require": {
         "php": "~8.4.0",
         "dotkernel/dot-errorhandler": "^4.4.0",
-        "laminas/laminas-component-installer": "^3.5.0",
-        "laminas/laminas-config-aggregator": "^1.17.0",
-        "mezzio/mezzio": "^3.24.0",
-        "mezzio/mezzio-fastroute": "^3.12.0",
-        "mezzio/mezzio-twigrenderer": "^2.17"
+        "laminas/laminas-component-installer": "^3.7.0",
+        "laminas/laminas-config-aggregator": "^1.19.0",
+        "mezzio/mezzio": "^3.25.0",
+        "mezzio/mezzio-fastroute": "^3.14.0",
+        "mezzio/mezzio-twigrenderer": "^2.18"
     },
     "require-dev": {
         "filp/whoops": "^2.17.0",
