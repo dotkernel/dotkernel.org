@@ -26,11 +26,11 @@
         }
     },
     "require": {
-        "php": "~8.4.0",
+        "php": "~8.5.0",
         "dotkernel/dot-errorhandler": "^4.4.0",
         "laminas/laminas-component-installer": "^3.7.0",
         "laminas/laminas-config-aggregator": "^1.19.0",
-        "mezzio/mezzio": "^3.25.0",
+        "mezzio/mezzio": "^3.26.0",
         "mezzio/mezzio-fastroute": "^3.14.0",
         "mezzio/mezzio-twigrenderer": "^2.18"
     },
