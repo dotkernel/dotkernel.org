@@ -272,7 +272,7 @@
                 <div class="row">
                     <h2>Middleware Flow</h2>
                 </div>
-                <p>The graph below demonstrates a default flow between Dotkernel's middlewares.</p>
+                <p>The graph below demonstrates a default flow between Dotkernel's middleware.</p>
             </div>
         </div>
 
@@ -283,6 +283,23 @@
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">MalformedRequestBodyMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
                     </div>
                     <div class="box-small response">
                         <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
