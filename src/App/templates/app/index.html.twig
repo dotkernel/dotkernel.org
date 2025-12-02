@@ -279,7 +279,7 @@
         <div class="flow-graphs middlewares hide-mobile">
             <div class="flow-container">
                 <div class="box-big">
-                    <div class="title">ErrorHandlerInterface</div>
+                    <div class="title">ProblemDetailsMiddleware</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
@@ -295,10 +295,28 @@
                 </div>
 
                 <div class="box-big">
-                    <div class="title">Other Middlewares (Optional)</div>
+                    <div class="title">BodyParamsMiddleware</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">ServerUrlMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
                     </div>
                     <div class="box-small response">
                         <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
@@ -315,6 +333,7 @@
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
+                        <div class="button">Route</div>
                     </div>
                     <div class="box-small response">
                         <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
@@ -344,7 +363,41 @@
                 </div>
 
                 <div class="box-big">
-                    <div class="title">Other Middlewares (Optional)</div>
+                    <div class="title">ImplicitHeadMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">ImplicitOptionsMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">MethodNotAllowedMiddleware</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
@@ -362,6 +415,23 @@
 
                 <div class="box-big">
                     <div class="title">ContentNegotiationMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">DeprecationMiddleware</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
@@ -446,6 +516,23 @@
                 </div>
 
                 <div class="box-big">
+                    <div class="title">ResourceProviderMiddleware</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
                     <div class="title">DispatchMiddleware</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
@@ -463,7 +550,24 @@
                 </div>
 
                 <div class="box-big">
-                    <div class="title">NotFoundHandler (Fallback)</div>
+                    <div class="title">ProblemDetailsNotFoundHandler</div>
+                    <div class="box-small request">
+                        <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
+                        <div class="text">Request</div>
+                        <div class="button">Route</div>
+                    </div>
+                    <div class="box-small response">
+                        <img src="{{ asset('images/app/icon/arrow-out.svg') }}" alt="Response">
+                        Response
+                    </div>
+                </div>
+                <div class="two-arrows">
+                    <img class="arrow-down" src="{{ asset('images/app/icon/arrow-down.svg') }}" alt="Request">
+                    <img class="arrow-up" src="{{ asset('images/app/icon/arrow-up.svg') }}" alt="Response">
+                </div>
+
+                <div class="box-big">
+                    <div class="title">GetNotFoundResourceHandler</div>
                     <div class="box-small request">
                         <img src="{{ asset('images/app/icon/arrow-in.svg') }}" alt="Request">
                         <div class="text">Request</div>
@@ -492,7 +596,10 @@
                     <div class="box black">Request</div>
                 </div>
                 <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
-                <div class="row">
+                <div class="row" style="display: flex">
+                    <div class="box blue">mezzio/mezzio-problem-details</div>
+                    <div class="arrow-right"
+                         style="background: url('/images/app/icon/arrow-right.svg') no-repeat center;"></div>
                     <div class="box white">dotkernel/dot-errorhandler</div>
                 </div>
                 <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
@@ -568,7 +675,10 @@
                     <div class="box black">Request</div>
                 </div>
                 <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
-                <div class="row">
+                <div class="row" style="display: flex">
+                    <div class="box blue">mezzio/mezzio-problem-details</div>
+                    <div class="arrow-right"
+                         style="background: url('/images/app/icon/arrow-right.svg') no-repeat center;"></div>
                     <div class="box white">dotkernel/dot-errorhandler</div>
                 </div>
                 <div class="arrow-down" style="background: url('/images/app/icon/arrow-down.svg') no-repeat left;"></div>
