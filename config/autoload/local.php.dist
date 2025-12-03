@@ -17,9 +17,9 @@ return [
     ],
     'routes'      => [
         'page' => [
-            'flowMiddlewares'    => 'flow-middlewares',
-            'flowLibraries'      => 'flow-libraries',
-            'flowLibrariesEmail' => 'flow-libraries-email',
+            'flow-middleware'      => 'flow-middleware',
+            'flow-libraries'       => 'flow-libraries',
+            'flow-libraries-email' => 'flow-libraries-email',
         ],
     ],
 ];
