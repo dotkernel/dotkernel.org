@@ -11,12 +11,14 @@ export default defineConfig({
             targets: [
                 {
                     src: 'App/assets/fonts/*',
-                    dest: 'fonts'
-                },
+                    dest: 'fonts',
+                    rename: { stripBase: true },
+            },
                 {
                     src: 'App/assets/images/*',
-                    dest: 'images/app/'
-                },
+                    dest: 'images/app/',
+                    rename: { stripBase: true },
+            },
             ],
         }),
         ViteMinifyPlugin({}),
