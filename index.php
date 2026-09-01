@@ -2,13 +2,6 @@
 
 declare(strict_types=1);
 
-/**
- * Standalone redirect controller for the archived dotkernel.org site.
- *
- * The application has moved to https://www.dotkernel.com/ - this script
- * replaces the previous Mezzio application and keeps old URLs from
- * breaking by sending visitors and search engines to their new home.
- */
 
 const PAGE_REDIRECTS = [
     '/'                            => 'https://www.dotkernel.com/',

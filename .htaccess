@@ -1,11 +1,8 @@
 RewriteEngine On
 
-# Serve real files (this index.php, .htaccess) directly.
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 
-# Route every other request through index.php, which decides whether
-# to 301 redirect, respond 410 Gone, or fall back to the catch-all.
 RewriteRule ^(.*)$ index.php [NC,L,QSA]
