@@ -5,9 +5,9 @@ declare(strict_types=1);
 
 const PAGE_REDIRECTS = [
     '/'                            => 'https://www.dotkernel.com/api',
-    '/page/flow-middleware'        => 'https://www.dotkernel.com/#request-lifecycle',
-    '/page/flow-libraries'         => 'https://www.dotkernel.com/#components-dot-packages',
-    '/page/flow-libraries-email'   => 'https://www.dotkernel.com/#components-dot-packages',
+    '/page/flow-middleware'        => 'https://www.dotkernel.com/architecture/#middleware-flow',
+    '/page/flow-libraries'         => 'https://www.dotkernel.com/architecture/#library-flow',
+    '/page/flow-libraries-email'   => 'https://www.dotkernel.com/architecture/#library-flow-email',
 ];
 
 const CATCH_ALL_REDIRECT = 'https://www.dotkernel.com/api/';
